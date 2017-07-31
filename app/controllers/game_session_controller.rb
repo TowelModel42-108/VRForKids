@@ -19,9 +19,14 @@ class GameSessionController < ApplicationController
 
   def update_score
 
-    game = GameSession.new
+    game = GameSession.new()
 
-    user_id = 1 #current_user.id -> need to be fixed
+    p session.to_json
+    p current_user
+    # session.game_id = params[:id]
+
+    user_id = current_user.id # -> need to be fixed
+    p current_user
 
 
     game.user_id = user_id
