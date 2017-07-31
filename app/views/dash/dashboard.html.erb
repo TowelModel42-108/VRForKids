@@ -8,6 +8,7 @@
 
 <%=link_to "Games Index", game_index_path %>
 <%=link_to "Sessions Index", sessions_index_path %>
+<%= render "game_session/stats"%>
 <% else %>
 <% controller.redirect_to root_path %>
 <% end %>

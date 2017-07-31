@@ -2,15 +2,22 @@
 
 
 
+
 <table>
   <th>Session ID </th>
   <th>Game ID</th>
+  <th>Score</th>
   <th>Date Played</th>
-  <% @sessions.each do |sesh| %>
+  <th>Session Ended At </th>
+  <% @sessions.where(user_id: current_user.id).each do |sesh| %>
   <tr>
     <td><%= sesh.id %></td>
     <td><%= Game.find(sesh.game_id)[:title] %></td>
+    <td><%= sesh.score %></td>
     <td><%= sesh.created_at %></td>
+    <td><%= sesh.updated_at %></td>
+
+
   </tr>
 <% end %>
 </table>
@@ -18,3 +25,6 @@
 <% if false %>
 <%= (sesh.created_at - sesh.updated_at) %>
 <% end %>
+
+<%= high_chart_globals(@chart_globals) %>
+<%= high_chart("some_id", @chart) %>
