@@ -26,6 +26,7 @@
  	height: 100%;
  	width: 100%;
  	overflow-x:hidden;
+  margin: 0;
  }
 
  ::-moz-selection{background:#1abc9c;color:white}
@@ -40,7 +41,7 @@
  	border-top: 1px solid #32465A;
  	border-bottom: 1px solid #32465A;
  	background-color: #34495e;
- 	padding: 90px 0;
+ 	padding: 20px 0;
  }
 
  .descp{
@@ -242,7 +243,7 @@
  color: #ffffff;
  }
  .navbar-default .navbar-brand:hover {
- color: #ECEBEB;
+ color: #1abc9c;
  }
 
  .navbar-brand {
@@ -261,7 +262,7 @@
  	padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
  	padding-bottom: 50px;
  	color: #f8f8f8;
- 	background: url(images/intro/intro5.jpg) no-repeat center center;
+ 	background: url(intro/intro5.jpg) no-repeat center center;
  	background-size: cover;
  	text-align: center;
  }
@@ -313,7 +314,7 @@
  .content-section-b {
  	border-top: 1px solid #e7e7e7;
  	border-bottom: 1px solid #e7e7e7;
- 	padding: 90px 0;
+ 	padding: 30px 0;
  }
 
  .section-heading {
@@ -329,7 +330,7 @@
  .banner {
  	padding: 100px 0;
  	color: #f8f8f8;
- 	background: url(banner-bg.jpg) no-repeat center center;
+ 	background: url(intro/banner-bg.jpg) no-repeat center center;
  	background-size: cover;
  }
 
