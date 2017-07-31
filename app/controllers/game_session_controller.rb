@@ -39,7 +39,7 @@ class GameSessionController < ApplicationController
   end
 
   def get_score
-    user_id = 1 #current_user.id -> need to be fixed
+    user_id = current_user.id #-> need to be fixed
     scores = GameSession.where(user_id: user_id, game_id: params[:id]).map(&:score).compact.inject(:+)
     render json: { is_success: true, score: scores }
 
