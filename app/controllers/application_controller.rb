@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   def current_user
     if params[:user_id].blank?
+      p devise_current_user
       devise_current_user
     else
       User.find(params[:user_id])

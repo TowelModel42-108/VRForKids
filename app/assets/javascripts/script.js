@@ -5,14 +5,14 @@ Build: 1.0
 
 */
 
-$(window).load(function() {
+$(document).on('turbolinks:load', function() {
 	//Preloader
 	$('#status').delay(300).fadeOut();
 	$('#preloader').delay(300).fadeOut('slow');
 	$('body').delay(550).css({'overflow':'visible'});
 })
 
-$(document).ready(function() {
+$(document).on('turbolinks:load', function() {
 		//animated logo
 		$(".navbar-brand").hover(function () {
 			$(this).toggleClass("animated shake");
@@ -51,24 +51,24 @@ $(document).ready(function() {
 		});
 
 		//SmothScroll
-		$('a[href*=#]').click(function() {
-			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-			&& location.hostname == this.hostname) {
-					var $target = $(this.hash);
-					$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-					if ($target.length) {
-							var targetOffset = $target.offset().top;
-							$('html,body').animate({scrollTop: targetOffset}, 600);
-							return false;
-					}
-			}
-		});
+		// $('a[href*=#]').click(function() {
+		// 	if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+		// 	&& location.hostname == this.hostname) {
+		// 			var $target = $(this.hash);
+		// 			$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+		// 			if ($target.length) {
+		// 					var targetOffset = $target.offset().top;
+		// 					$('html,body').animate({scrollTop: targetOffset}, 600);
+		// 					return false;
+		// 			}
+		// 	}
+		// });
 
 		//Subscribe
-		new UIMorphingButton( document.querySelector( '.morph-button' ) );
-		// for demo purposes only
-		[].slice.call( document.querySelectorAll( 'form button' ) ).forEach( function( bttn ) {
-			bttn.addEventListener( 'click', function( ev ) { ev.preventDefault(); } );
-		} );
+		// new UIMorphingButton( document.querySelector( '.morph-button' ) );
+		// // for demo purposes only
+		// [].slice.call( document.querySelectorAll( 'form button' ) ).forEach( function( bttn ) {
+		// 	bttn.addEventListener( 'click', function( ev ) { ev.preventDefault(); } );
+		// } );
 
 });
