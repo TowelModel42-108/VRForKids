@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {
+        sessions: 'users/sessions'
+  }
 
   # get 'dash/enter'
   # get 'games/play/:id'
@@ -17,6 +19,7 @@ Rails.application.routes.draw do
 
 
   get 'game/:id/show', to: 'game#show', as:'game_show'
+  # get 'logout' => {controller: 'users/sessions', action: 'destroy'}
 
   get 'dashboard/game_sessions/', to: 'game_session#index', as: 'sessions_index'
 

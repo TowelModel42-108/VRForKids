@@ -123,7 +123,7 @@
  filter: alpha(opacity=95) !important;
  }
 
- .item .img-responsive {cursor:url(../img/cross.png),auto;}
+ .item .img-responsive {cursor:image_url('cross.png'),auto;}
 
  /* Preloader */
  #preloader {
