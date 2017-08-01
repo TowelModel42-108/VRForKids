@@ -1,0 +1,39 @@
+<h1>Game Stats</h1>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<div id="game-stat-dash-chart" style="width:100%; height:400px;">
+  <a class="json"><%= ActiveSupport::JSON.encode(GameSession.where(user_id: current_user.id)) %></a>
+
+
+
+<script>
+
+new Highcharts.Chart( options );
+    var myChart = chart.renderTo('.game-stat-dash-chart', {
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Fruit Consumption'
+        },
+        xAxis: {
+            categories: ['Apples', 'Bananas', 'Oranges']
+        },
+        yAxis: {
+            title: {
+                text: 'Fruit eaten'
+            }
+        },
+        series: [{
+            name: 'Jane',
+            data: [1, 0, 4]
+        }, {
+            name: 'John',
+            data: [5, 7, 3]
+        }]
+    });
+});
+</script>
+</div>
+
+
+<#-% https://www.highcharts.com/docs/working-with-data/data-from-a-database %>
